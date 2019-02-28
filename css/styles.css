@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
+
+:root {
+
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	box-sizing: border-box;
+	transition: all .3s ease-in-out;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+body, html {
+	min-height: 100%;
+	width: 100%;
+}
+
+body {
+	background: #fdead8;
+}
+
+.clear::after, .clear::before {
+	content: " ";
+	display: table;
+}
+
+.clear::after {
+	clear: both;
+}
+
+/* Main Styles */
+
+h1 {
+	text-align: center;
+	padding: 40px 0;
+	font-family: 'Luckiest Guy', cursive;
+	font-size: 40px;
+	position: relative;
+	width: 800px;
+	margin: 0 auto;
+	color: #d1880a;
+}
+
+h1:after {
+	content: "Checkers made with position: absolute";
+	position: absolute;
+	left:12px;
+	bottom:43px;
+	color: #d1880a;
+	text-shadow: 1px 1px 2px black, 0 0 7px #a76d08;
+}
+
+.container-for-board {
+
+}
+
+.board-edge {
+	margin: 0 auto;
+	width: 1100px;
+	height: 1100px;
+	padding: 50px;
+    background-image: radial-gradient(ellipse at center, rgba(240,183,161,1) 0%,rgba(140,51,16,1) 50%,rgba(117,34,1,1) 51%,rgba(191,110,78,1) 100%);
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, .5);
+
+
+}
+
+.board {
+	height: 100%;
+	background: #f9d6b2;
+	position: relative;
+}
+
+.cell-row {
+	position: relative;
+	top:0;
+	overflow: hidden;
+}
+
+
+.cell-row:first-child .coordinate {
+	border-top: 10px solid rgba(0, 0, 0, .1);
+/* 	box-shadow: inset 0px 2px 10px 1px rgba(0, 0, 0, .5); */
+}
+
+.cell-row .cell:first-child{
+	border-left: 10px solid rgba(0, 0, 0, .1);
+}
+
+
+.cell {
+	height: 100px;
+	width: 100px;
+}
+
+.coordinate {
+	font-size: 40px;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #f1c28c;
+	color: #654313;
+}
+
+.one {
+	position: absolute;
+	left: 10%;
+	top: inherit;
+}
+
+.two {
+	position: absolute;
+	left: 20%;
+	top: inherit;	
+}
+
+.three {
+	position: absolute;
+	left: 30%;
+	top: inherit;
+}
+
+.four {
+	position: absolute;
+	left: 40%;
+	top: inherit;
+}
+
+.five {
+	position: absolute;
+	left: 50%;
+	top: inherit;
+}
+
+.six {
+	position: absolute;
+	left: 60%;
+	top: inherit;
+}
+
+.seven {
+	position: absolute;
+	left: 70%;
+	top: inherit;
+}
+
+.eight {
+	position: absolute;
+	left: 80%;
+	top: inherit;
+}
+
+.coordinate:last-child {
+	position: absolute;
+	left: 90%;
+	top: inherit;
+}
+
+.white {
+	background: #fff;
+}
+
+.black {
+	background:#000;
+}
+
+
+.checker-black::after {
+	content:'';
+	position: absolute;
+	left:0;
+	top:0;
+	bottom:0;
+	right:0;
+	margin:auto;
+	width: 40px;
+	height: 40px;
+	background: #808282;
+	border-radius: 50%;
+	border: 15px solid #595c5c;
+	box-shadow: inset 0px 2px 10px 2px rgba(0, 0, 0, .5);
+}
+.checker-black::before {
+	content:'';
+	position: absolute;
+	left:0;
+	top:0;
+	bottom:0;
+	right:0;
+	margin:auto;
+	width: 90px;
+	height: 90px;
+	background: #353939;
+	border-radius: 50%;
+}
+
+.checker-white::after {
+	content:'';
+	position: absolute;
+	left:0;
+	top:0;
+	bottom:0;
+	right:0;
+	margin:auto;
+	width: 40px;
+	height: 40px;
+	background: #fefefe;
+	border-radius: 50%;
+	border: 15px solid #cfcfcf;
+	box-shadow: inset 0px 2px 10px 2px rgba(0, 0, 0, .5);
+}
+.checker-white::before {
+	content:'';
+	position: absolute;
+	left:0;
+	top:0;
+	bottom:0;
+	right:0;
+	margin:auto;
+	width: 90px;
+	height: 90px;
+	background: #a2a2a2;
+	border-radius: 50%;
+}
+
